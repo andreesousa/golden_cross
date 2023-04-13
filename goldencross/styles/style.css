@@ -1,0 +1,352 @@
+/*-------- reset do css----------*/
+/*Os navegadores costumam ter o css padrão diferente de outros 
+esse seletor reseta o css padrão de todos os navegadores*/
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  font-size: 62.5%;
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100vh;
+}
+
+:root {
+  --font-color: black;
+}
+
+/*-------- MOBILE ----------*/
+
+header {
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  background-color: white;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+}
+
+header img {
+  width: 14rem;
+  padding: 0.5rem;
+}
+
+/*--- MENU --*/
+#menu-desktop{
+  display: none;
+}
+#menu {
+  display: block;
+  position: absolute;
+  top: 3.5rem;
+  width: 100%;
+  right: 0px;
+  list-style: none;
+  height: 0;
+  transition: .6s;
+  z-index: 1000;
+  background: #204768;
+  visibility: hidden;
+  overflow-y: hidden;
+}
+
+#menu a {
+  display: block;
+  padding: 1rem 0;
+  margin-block: 1rem;
+}
+
+#nav a {
+  text-decoration: none;
+  font-size: 1rem;
+  text-align: center;
+  color: white;
+}
+
+
+/*--- MENU ACTIVE --*/
+#nav.active #menu {
+  visibility: visible;
+  height: calc(100vh - 1rem);
+}
+
+/*--- BUTTOM --*/
+
+#btn {
+  display: flex;
+  padding: .5rem 1rem;
+  border: none;
+  cursor: pointer;
+  background: white;
+}
+
+#hamburguer {
+  border-top: 3px solid;
+  width: 2.5rem;
+  color: #204768;
+}
+
+#hamburguer::after,
+#hamburguer::before {
+  content: '';
+  display: block;
+  border-top: 3px solid;
+  width: 2.2rem;
+  margin-top: .5rem;
+  transition: .3s;
+  position: relative;
+  color: #204768;
+}
+
+#nav.active #hamburguer {
+  border-top: transparent;
+}
+
+#nav.active #hamburguer::before {
+  transform: rotate(135deg);
+}
+
+#nav.active #hamburguer::after {
+  transform: rotate(-135deg);
+  top: -.7rem;
+
+}
+
+.container {
+  width: 100%;
+  min-height: auto;
+}
+
+.one {
+  padding-top: 3.5rem;
+  display: flex;
+  justify-content: center;
+  background-image: url(https://img.freepik.com/vetores-premium/fundo-azul-e-dourado-de-luxo_23-2149329423.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+
+.container-price {
+  margin-block: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block: 9rem;
+}
+
+.container-price h1 {
+  font-size: 3rem;
+}
+
+.container-price p {
+  width: 90%;
+  height: 0.1rem;
+  margin-block: .3rem;
+  background-color: #f1af09;
+}
+
+.container-price h2 {
+  font-size: 2rem;
+}
+
+.gold {
+  color: #f1af09;
+}
+
+.container-price a {
+  text-decoration: none;
+  background-color: #f1af09;
+  color: #204768;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  padding: 1rem;
+  border-radius: 2rem;
+  margin-block: 2rem;
+  box-shadow: inset 5px 5px 15px #2b2929;
+}
+
+.tow>h1 {
+  color: #f1af09;
+  margin-block: 2rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.tow>h2 {
+  color: #204768;
+  margin-block: 2rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.tow p {
+  color: #204768;
+  width: 90%;
+  margin: auto;
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.cards-container{
+  width: 80%;
+  margin: auto;
+}
+
+
+.card {
+  width: 14rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block: 1rem;
+  margin: 0.5rem auto;
+  border: 0.3rem #204768 solid;
+  border-radius: 2rem;
+
+}
+
+.card h1 {
+  color: #f1af09;
+  font-size: 2.5rem;
+}
+
+.card h2 {
+  color: #204768;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.card img {
+  width: 6rem;
+  height: 6rem;
+}
+
+.tre {
+  background: #204768;
+}
+
+.tre h1 {
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  width: 90%;
+  margin: auto;
+  padding-block: 1rem;
+}
+
+.tre form {
+  display: flex;
+  flex-direction: column;
+}
+
+.tre input {
+  width: 90%;
+  height: 1.5rem;
+  padding: 1rem 0.5rem;
+  border-radius: 0.3rem;
+  margin: 0.3rem auto;
+  font-size: 1rem;
+  color: #204768;
+}
+
+.tre button {
+  width: 70%;
+  height: 3rem;
+  padding: 1rem 0.5rem;
+  border-radius: 0.3rem;
+  margin: 0.3rem auto;
+  font-size: 1rem;
+  font-weight: bolder;
+  color: #204768;
+  margin-bottom: 2rem;
+}
+
+/*-------- DESKTOP/TABLET---------*/
+
+@media screen and (min-width:768px) { 
+
+  header{
+    justify-content: space-around;
+  }
+  #nav button{
+    display: none;
+  }
+
+  #nav-desktop #menu-desktop{
+    display: flex;
+  }
+
+  #nav-desktop a{
+    text-decoration: none;
+    font-size: 1rem;
+    display: table;
+    padding: .3rem;
+    font-weight: bold;
+    color: #204768;
+  }
+
+  #nav-desktop li{
+    list-style-type: none;
+    margin: 0 0.3rem;
+    
+  }
+
+  #nav-desktop li:hover{
+    border-bottom:0.1rem #204768 solid;
+  }
+
+  .cards-container{
+    display: flex;
+    width: 100%;
+    margin: 0; 
+  }
+
+  .card {
+    width: 14rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0.5rem auto;
+    border: 0.3rem #204768 solid;
+    border-radius: 2rem;
+  }
+
+  .card img {
+    width: 6rem;
+    height: 6rem;
+  }
+
+  .tre input {
+    width: 50%;
+    height: 0;
+    padding: 1.4rem 0.3rem;
+  }
+  
+  .tre button {
+    width: 15rem;
+    
+  }
+
+  .tre button:hover{
+    background-color: #2e72aa;
+    transition:all 500ms;
+    color: white;
+  }
+
+}
+
+@media screen and (min-width:1000px){
+  
+  .cards-container{
+    width: 90%;
+    margin: auto;
+  }
+}
+
+  

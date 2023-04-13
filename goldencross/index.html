@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link href="./styles/style.css" rel="stylesheet">
+   <title>Planos Golden Cross</title>
+</head>
+
+<body>
+   <header>
+      <img
+         src="https://media-private.canva.com/BxOeQ/MAFfGVBxOeQ/1/s.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJWF6QO3UH4PAAJ6Q%2F20230411%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230411T084535Z&X-Amz-Expires=41524&X-Amz-Signature=67735a9254265f8dee9be2c82ec6e467f8e42b46e48f75918ab23926d146d189&X-Amz-SignedHeaders=host&response-expires=Tue%2C%2011%20Apr%202023%2020%3A17%3A39%20GMT"
+         alt="logo golden cross">
+      <div id="title">
+         <!-- <h1>Planos</h1> <h1>Golden Cross</h1> -->
+      </div>
+      <nav id="nav">
+         <button onclick="openMenu()" aria-lavel="Abrir Menu" id="btn" aria-expanded="false">
+            <span id="hamburguer"></span>
+         </button>
+         <ul id="menu">
+            <li><a onclick="closeMenu()" class="navigator" href="#one">CENTAL DE VENDAS</a></li>
+            <li><a onclick="closeMenu()" class="navigator" href="#tow">COMPARE E MUDE</a></li>
+            <li><a onclick="closeMenu()" class="navigator" href="#tre">CONTATO</a></li>
+         </ul>
+      </nav>
+      <nav id="nav-desktop">
+         <ul id="menu-desktop">
+            <li><a class="navigator" href="#one">CENTAL DE VENDAS</a></li>
+            <li><a class="navigator" href="#tow">COMPARE E MUDE</a></li>
+            <li><a class="navigator" href="#tre">CONTATO</a></li>
+         </ul>
+      </nav>
+      
+   </header>
+
+   <div class="container one" id="one">
+      <div class="container-price">
+         <h1>COMPARE</h1>
+         <h1 class="gold">E MUDE</h1>
+         <p></p>
+         <h2>PLANOS A PARTIR DE</h2>
+         <h2 class="gold">R$203,79</h2>
+         <a href="" id="compare">Solicitar Cotação</a>
+      </div>
+   </div>
+
+   <div class="container tow" id="tow">
+      <h1>COMPARE E MUDE PARA GOLDENCROSS</h1>
+      <div class="cards-container">
+         <div class="card">
+            <h1>625</h1>
+            <h2>HOSPITAIS</h2>
+            <img src="./svg/hospital.svg" alt="icone de hospital">
+         </div>
+
+         <div class="card">
+            <h1>14.4 MIL</h1>
+            <h2>CONSULTÓRIOS E CLÍNICAS</h2>
+            <img src="./svg/consulta-medica.svg" alt="icone de hospital">
+         </div>
+         <div class="card">
+            <h1>1.5 MIL</h1>
+            <h2>LABORATÓRIOS</h2>
+            <img src="./svg/microscopio.svg" alt="icone de hospital">
+         </div>
+      </div>
+      <h2>A melhor rede de hospitais do Rio de Janeiro</h2>
+      <p>Rede D'or completa com hospitais como Copa D'or, Barra D'or, Niterói D'or, Caxias D'or, Oeste D'or e Glória
+         D'or, Hospital Israelita, Albert Sabin, Pronto Baby, Perinatal, CNH, Casa de Saúde São José e Hospital
+         Vitória. Além de excelentes laboratórios como Lâmina, Bronstein e Sérgio Franco</p>
+   </div>
+
+   <div class="container tre" id="tre">
+      <h1>Quer proteger a saúde e o bem-estar seu e da sua família?</h1>
+      <form>
+         <input type="text" placeholder="Nome">
+         <input type="email" placeholder="Email">
+         <input type="celular" placeholder="Celular">
+
+         <button type="submit">Solicitar Cotação</button>
+      </form>
+   </div>
+
+   <script src="./src/main.js"></script>
+   <script src="./src/scroll.js"></script>
+</body>
+
+</html>
